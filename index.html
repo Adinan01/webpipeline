@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEase - Online Store</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">ShopEase</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="cart">
+            🛒 Cart <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to ShopEase</h1>
+            <p>Discover amazing products at the best prices.</p>
+            <button onclick="scrollToProducts()">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products-section" id="products">
+
+        <h2>Our Products</h2>
+
+        <div class="product-container">
+
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x220?text=Headphones"
+                     alt="Wireless Headphones">
+
+                <h3>Wireless Headphones</h3>
+
+                <p class="description">
+                    High quality wireless headphones with clear sound.
+                </p>
+
+                <p class="price">₹1,499</p>
+
+                <button onclick="addToCart('Wireless Headphones', 1499)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x220?text=Smart+Watch"
+                     alt="Smart Watch">
+
+                <h3>Smart Watch</h3>
+
+                <p class="description">
+                    Stylish smartwatch with fitness tracking features.
+                </p>
+
+                <p class="price">₹2,999</p>
+
+                <button onclick="addToCart('Smart Watch', 2999)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x220?text=Shoes"
+                     alt="Running Shoes">
+
+                <h3>Running Shoes</h3>
+
+                <p class="description">
+                    Comfortable running shoes for everyday use.
+                </p>
+
+                <p class="price">₹1,999</p>
+
+                <button onclick="addToCart('Running Shoes', 1999)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x220?text=Backpack"
+                     alt="Travel Backpack">
+
+                <h3>Travel Backpack</h3>
+
+                <p class="description">
+                    Durable backpack perfect for travel and college.
+                </p>
+
+                <p class="price">₹999</p>
+
+                <button onclick="addToCart('Travel Backpack', 999)">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2>About ShopEase</h2>
+
+        <p>
+            ShopEase is a sample online shopping website where you can
+            explore products and add them to your shopping cart.
+        </p>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+
+        <p>Email: support@shopease.com</p>
+        <p>Phone: +91 98765 43210</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 ShopEase. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
