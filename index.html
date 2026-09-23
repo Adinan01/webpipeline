@@ -4,142 +4,336 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ShopEase - Online Store</title>
+    <title>ENTERTAINX - Entertainment Hub</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Header -->
+    <!-- Navigation -->
     <header>
-        <div class="logo">ShopEase</div>
+        <nav class="navbar">
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#products">Products</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <div class="logo">
+                ENTERTAIN<span>X</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#trending">Trending</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search..."
+                >
+
+                <button id="searchBtn">🔍</button>
+
+                <button id="menuBtn" class="menu-btn">☰</button>
+            </div>
+
         </nav>
-
-        <div class="cart">
-            🛒 Cart <span id="cart-count">0</span>
-        </div>
     </header>
 
+
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section id="home" class="hero">
+
         <div class="hero-content">
-            <h1>Welcome to ShopEase</h1>
-            <p>Discover amazing products at the best prices.</p>
-            <button onclick="scrollToProducts()">Shop Now</button>
-        </div>
-    </section>
 
-    <!-- Products -->
-    <section class="products-section" id="products">
+            <p class="small-title">WELCOME TO</p>
 
-        <h2>Our Products</h2>
+            <h1>
+                YOUR WORLD OF
+                <span>ENTERTAINMENT</span>
+            </h1>
 
-        <div class="product-container">
+            <p>
+                Discover the latest movies, music, games,
+                celebrities and trending entertainment news
+                all in one place.
+            </p>
 
-            <!-- Product 1 -->
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300x220?text=Headphones"
-                     alt="Wireless Headphones">
-
-                <h3>Wireless Headphones</h3>
-
-                <p class="description">
-                    High quality wireless headphones with clear sound.
-                </p>
-
-                <p class="price">₹1,499</p>
-
-                <button onclick="addToCart('Wireless Headphones', 1499)">
-                    Add to Cart
+            <div class="hero-buttons">
+                <button class="primary-btn" onclick="exploreNow()">
+                    Explore Now
                 </button>
-            </div>
 
-            <!-- Product 2 -->
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300x220?text=Smart+Watch"
-                     alt="Smart Watch">
-
-                <h3>Smart Watch</h3>
-
-                <p class="description">
-                    Stylish smartwatch with fitness tracking features.
-                </p>
-
-                <p class="price">₹2,999</p>
-
-                <button onclick="addToCart('Smart Watch', 2999)">
-                    Add to Cart
-                </button>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300x220?text=Shoes"
-                     alt="Running Shoes">
-
-                <h3>Running Shoes</h3>
-
-                <p class="description">
-                    Comfortable running shoes for everyday use.
-                </p>
-
-                <p class="price">₹1,999</p>
-
-                <button onclick="addToCart('Running Shoes', 1999)">
-                    Add to Cart
-                </button>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300x220?text=Backpack"
-                     alt="Travel Backpack">
-
-                <h3>Travel Backpack</h3>
-
-                <p class="description">
-                    Durable backpack perfect for travel and college.
-                </p>
-
-                <p class="price">₹999</p>
-
-                <button onclick="addToCart('Travel Backpack', 999)">
-                    Add to Cart
+                <button class="secondary-btn" onclick="watchTrailer()">
+                    ▶ Watch Trailer
                 </button>
             </div>
 
         </div>
+
     </section>
 
-    <!-- About -->
-    <section class="about" id="about">
-        <h2>About ShopEase</h2>
+
+    <!-- Trending Section -->
+    <section id="trending" class="section">
+
+        <div class="section-title">
+            <p>WHAT'S HOT</p>
+            <h2>Trending Now 🔥</h2>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-image movie1">
+                    <span class="tag">#1 TRENDING</span>
+                </div>
+
+                <div class="card-content">
+                    <h3>Midnight City</h3>
+                    <p>Movie • Action</p>
+                    <button onclick="showDetails('Midnight City')">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-image movie2">
+                    <span class="tag">#2 TRENDING</span>
+                </div>
+
+                <div class="card-content">
+                    <h3>Neon Dreams</h3>
+                    <p>Music • Pop</p>
+                    <button onclick="showDetails('Neon Dreams')">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-image movie3">
+                    <span class="tag">#3 TRENDING</span>
+                </div>
+
+                <div class="card-content">
+                    <h3>Cyber World</h3>
+                    <p>Game • Adventure</p>
+                    <button onclick="showDetails('Cyber World')">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-image movie4">
+                    <span class="tag">NEW</span>
+                </div>
+
+                <div class="card-content">
+                    <h3>Lost Galaxy</h3>
+                    <p>Movie • Sci-Fi</p>
+                    <button onclick="showDetails('Lost Galaxy')">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Movies -->
+    <section id="movies" class="section dark-section">
+
+        <div class="section-title">
+            <p>WATCH NOW</p>
+            <h2>Popular Movies 🎬</h2>
+        </div>
+
+        <div class="movie-grid">
+
+            <div class="movie-card">
+                <div class="poster poster1"></div>
+                <h3>Dark Horizon</h3>
+                <p>⭐ 8.7 / 10</p>
+            </div>
+
+            <div class="movie-card">
+                <div class="poster poster2"></div>
+                <h3>Ocean Mystery</h3>
+                <p>⭐ 8.4 / 10</p>
+            </div>
+
+            <div class="movie-card">
+                <div class="poster poster3"></div>
+                <h3>The Last Mission</h3>
+                <p>⭐ 9.1 / 10</p>
+            </div>
+
+            <div class="movie-card">
+                <div class="poster poster4"></div>
+                <h3>Future World</h3>
+                <p>⭐ 8.9 / 10</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Music -->
+    <section id="music" class="section">
+
+        <div class="section-title">
+            <p>LISTEN NOW</p>
+            <h2>Popular Music 🎵</h2>
+        </div>
+
+        <div class="music-container">
+
+            <div class="music-player">
+
+                <div class="album-art">
+                    🎵
+                </div>
+
+                <div class="music-info">
+                    <h3 id="songTitle">Summer Nights</h3>
+                    <p>DJ Entertainment</p>
+
+                    <div class="progress">
+                        <div id="progressBar"></div>
+                    </div>
+
+                    <div class="music-controls">
+                        <button onclick="previousSong()">⏮</button>
+                        <button 
+                            id="playBtn"
+                            onclick="playMusic()"
+                            class="play-button"
+                        >
+                            ▶
+                        </button>
+                        <button onclick="nextSong()">⏭</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Games -->
+    <section id="games" class="section dark-section">
+
+        <div class="section-title">
+            <p>PLAY & ENJOY</p>
+            <h2>Popular Games 🎮</h2>
+        </div>
+
+        <div class="game-grid">
+
+            <div class="game-card">
+                <div class="game-image game1"></div>
+                <div>
+                    <h3>Cyber Warriors</h3>
+                    <p>Action • Multiplayer</p>
+                    <button onclick="playGame('Cyber Warriors')">
+                        Play Now
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="game-card">
+                <div class="game-image game2"></div>
+                <div>
+                    <h3>Speed Legends</h3>
+                    <p>Racing • Online</p>
+                    <button onclick="playGame('Speed Legends')">
+                        Play Now
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="game-card">
+                <div class="game-image game3"></div>
+                <div>
+                    <h3>Galaxy Quest</h3>
+                    <p>Adventure • RPG</p>
+                    <button onclick="playGame('Galaxy Quest')">
+                        Play Now
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+
+        <h2>Never Miss The Fun!</h2>
 
         <p>
-            ShopEase is a sample online shopping website where you can
-            explore products and add them to your shopping cart.
+            Subscribe to get the latest entertainment updates.
         </p>
+
+        <div class="subscribe">
+
+            <input 
+                type="email" 
+                id="email"
+                placeholder="Enter your email"
+            >
+
+            <button onclick="subscribeUser()">
+                Subscribe
+            </button>
+
+        </div>
+
     </section>
 
-    <!-- Contact -->
-    <section class="contact" id="contact">
-        <h2>Contact Us</h2>
-
-        <p>Email: support@shopease.com</p>
-        <p>Phone: +91 98765 43210</p>
-    </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 ShopEase. All Rights Reserved.</p>
+
+        <div class="footer-logo">
+            ENTERTAIN<span>X</span>
+        </div>
+
+        <p>
+            Your ultimate destination for entertainment.
+        </p>
+
+        <div class="socials">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+            <a href="#">Twitter</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 EntertainX. All Rights Reserved.
+        </p>
+
     </footer>
+
 
     <!-- JavaScript -->
     <script src="script.js"></script>
