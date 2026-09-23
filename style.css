@@ -14,8 +14,8 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background: #f8f5ff;
-    color: #222;
+    background: #f0f7ff;
+    color: #1e293b;
 }
 
 
@@ -25,7 +25,7 @@ body {
 
 header {
     height: 70px;
-    background: #4c1d95;
+    background: #0f4c81;
     color: white;
 
     display: flex;
@@ -38,13 +38,13 @@ header {
     top: 0;
     z-index: 1000;
 
-    box-shadow: 0 3px 15px rgba(76, 29, 149, 0.25);
+    box-shadow: 0 3px 15px rgba(15, 76, 129, 0.25);
 }
 
 .logo {
     font-size: 26px;
     font-weight: bold;
-    color: #f9a8d4;
+    color: #60c5ff;
 }
 
 nav {
@@ -60,7 +60,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #f9a8d4;
+    color: #60c5ff;
 }
 
 .cart {
@@ -68,7 +68,7 @@ nav a:hover {
 }
 
 #cart-count {
-    background: #ec4899;
+    background: #0ea5e9;
     color: white;
 
     padding: 4px 8px;
@@ -93,8 +93,8 @@ nav a:hover {
 
     background:
         linear-gradient(
-            rgba(76, 29, 149, 0.85),
-            rgba(126, 34, 206, 0.80)
+            rgba(15, 76, 129, 0.88),
+            rgba(14, 165, 233, 0.78)
         ),
         url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d")
         center/cover;
@@ -120,8 +120,8 @@ nav a:hover {
     border: none;
     border-radius: 30px;
 
-    background: #f9a8d4;
-    color: #4c1d95;
+    background: white;
+    color: #0f4c81;
 
     font-size: 16px;
     font-weight: bold;
@@ -132,7 +132,7 @@ nav a:hover {
 }
 
 .hero button:hover {
-    background: #ec4899;
+    background: #0ea5e9;
     color: white;
 
     transform: translateY(-3px);
@@ -152,7 +152,7 @@ nav a:hover {
 
     font-size: 36px;
 
-    color: #4c1d95;
+    color: #0f4c81;
 
     margin-bottom: 45px;
 }
@@ -180,10 +180,10 @@ nav a:hover {
 
     padding-bottom: 22px;
 
-    border: 1px solid #eee6ff;
+    border: 1px solid #dbeafe;
 
     box-shadow:
-        0 8px 25px rgba(76, 29, 149, 0.08);
+        0 8px 25px rgba(15, 76, 129, 0.08);
 
     transition: 0.3s;
 }
@@ -192,7 +192,7 @@ nav a:hover {
     transform: translateY(-10px);
 
     box-shadow:
-        0 15px 35px rgba(126, 34, 206, 0.18);
+        0 15px 35px rgba(14, 165, 233, 0.20);
 }
 
 .product-card img {
@@ -207,13 +207,13 @@ nav a:hover {
 
     font-size: 20px;
 
-    color: #4c1d95;
+    color: #0f4c81;
 }
 
 .description {
     margin: 0 20px;
 
-    color: #6b7280;
+    color: #64748b;
 
     line-height: 1.6;
 }
@@ -221,7 +221,7 @@ nav a:hover {
 .price {
     margin: 16px 20px;
 
-    color: #db2777;
+    color: #0284c7;
 
     font-size: 23px;
 
@@ -239,7 +239,7 @@ nav a:hover {
 
     border-radius: 8px;
 
-    background: #7e22ce;
+    background: #0f4c81;
 
     color: white;
 
@@ -252,7 +252,7 @@ nav a:hover {
 }
 
 .product-card button:hover {
-    background: #ec4899;
+    background: #0ea5e9;
 
     transform: scale(1.02);
 }
@@ -267,13 +267,13 @@ nav a:hover {
 
     text-align: center;
 
-    background: #ede9fe;
+    background: #dbeafe;
 }
 
 .about h2 {
     font-size: 34px;
 
-    color: #4c1d95;
+    color: #0f4c81;
 
     margin-bottom: 20px;
 }
@@ -285,7 +285,7 @@ nav a:hover {
 
     line-height: 1.8;
 
-    color: #555;
+    color: #475569;
 }
 
 
@@ -298,11 +298,11 @@ nav a:hover {
 
     text-align: center;
 
-    background: #f8f5ff;
+    background: #f0f7ff;
 }
 
 .contact h2 {
-    color: #4c1d95;
+    color: #0f4c81;
 
     margin-bottom: 20px;
 }
@@ -310,7 +310,7 @@ nav a:hover {
 .contact p {
     margin: 10px;
 
-    color: #555;
+    color: #475569;
 }
 
 
@@ -319,7 +319,7 @@ nav a:hover {
 ========================= */
 
 footer {
-    background: #2e1065;
+    background: #082f49;
 
     color: white;
 
