@@ -1,4 +1,7 @@
-/* Reset */
+/* =========================
+   RESET
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,15 +14,18 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background: #f5f7fa;
+    background: #f8f5ff;
     color: #222;
 }
 
-/* Header */
+
+/* =========================
+   HEADER
+========================= */
 
 header {
     height: 70px;
-    background: #111827;
+    background: #4c1d95;
     color: white;
 
     display: flex;
@@ -27,30 +33,34 @@ header {
     justify-content: space-between;
 
     padding: 0 7%;
+
     position: sticky;
     top: 0;
     z-index: 1000;
+
+    box-shadow: 0 3px 15px rgba(76, 29, 149, 0.25);
 }
 
 .logo {
-    font-size: 25px;
+    font-size: 26px;
     font-weight: bold;
-    color: #38bdf8;
+    color: #f9a8d4;
 }
 
 nav {
     display: flex;
-    gap: 25px;
+    gap: 28px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    font-weight: 500;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #38bdf8;
+    color: #f9a8d4;
 }
 
 .cart {
@@ -58,16 +68,22 @@ nav a:hover {
 }
 
 #cart-count {
-    background: #ef4444;
+    background: #ec4899;
+    color: white;
+
     padding: 4px 8px;
     border-radius: 50%;
+
     font-size: 12px;
 }
 
-/* Hero */
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
-    min-height: 450px;
+    min-height: 470px;
 
     display: flex;
     align-items: center;
@@ -77,8 +93,8 @@ nav a:hover {
 
     background:
         linear-gradient(
-            rgba(15, 23, 42, 0.8),
-            rgba(15, 23, 42, 0.8)
+            rgba(76, 29, 149, 0.85),
+            rgba(126, 34, 206, 0.80)
         ),
         url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d")
         center/cover;
@@ -89,45 +105,56 @@ nav a:hover {
 }
 
 .hero h1 {
-    font-size: 50px;
+    font-size: 52px;
     margin-bottom: 15px;
 }
 
 .hero p {
     font-size: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 }
 
 .hero button {
-    padding: 13px 30px;
-    border: none;
-    border-radius: 6px;
+    padding: 14px 32px;
 
-    background: #38bdf8;
-    color: #111827;
+    border: none;
+    border-radius: 30px;
+
+    background: #f9a8d4;
+    color: #4c1d95;
 
     font-size: 16px;
     font-weight: bold;
 
     cursor: pointer;
+
     transition: 0.3s;
 }
 
 .hero button:hover {
-    background: #0ea5e9;
+    background: #ec4899;
     color: white;
+
+    transform: translateY(-3px);
 }
 
-/* Products */
+
+/* =========================
+   PRODUCTS
+========================= */
 
 .products-section {
-    padding: 70px 7%;
+    padding: 80px 7%;
 }
 
 .products-section h2 {
     text-align: center;
-    font-size: 35px;
-    margin-bottom: 40px;
+
+    font-size: 36px;
+
+    color: #4c1d95;
+
+    margin-bottom: 45px;
 }
 
 .product-container {
@@ -136,49 +163,68 @@ nav a:hover {
     grid-template-columns:
         repeat(auto-fit, minmax(240px, 1fr));
 
-    gap: 25px;
+    gap: 28px;
 }
 
-/* Product Card */
+
+/* =========================
+   PRODUCT CARD
+========================= */
 
 .product-card {
     background: white;
-    border-radius: 12px;
+
+    border-radius: 16px;
+
     overflow: hidden;
 
-    padding-bottom: 20px;
+    padding-bottom: 22px;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eee6ff;
+
+    box-shadow:
+        0 8px 25px rgba(76, 29, 149, 0.08);
 
     transition: 0.3s;
 }
 
 .product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 15px 35px rgba(126, 34, 206, 0.18);
 }
 
 .product-card img {
     width: 100%;
-    height: 200px;
+    height: 210px;
+
     object-fit: cover;
 }
 
 .product-card h3 {
-    margin: 18px 20px 10px;
+    margin: 20px 20px 10px;
+
     font-size: 20px;
+
+    color: #4c1d95;
 }
 
 .description {
     margin: 0 20px;
-    color: #666;
-    line-height: 1.5;
+
+    color: #6b7280;
+
+    line-height: 1.6;
 }
 
 .price {
-    margin: 15px 20px;
-    color: #0ea5e9;
-    font-size: 22px;
+    margin: 16px 20px;
+
+    color: #db2777;
+
+    font-size: 23px;
+
     font-weight: bold;
 }
 
@@ -187,13 +233,18 @@ nav a:hover {
 
     width: calc(100% - 40px);
 
-    padding: 12px;
+    padding: 13px;
 
     border: none;
-    border-radius: 6px;
 
-    background: #111827;
+    border-radius: 8px;
+
+    background: #7e22ce;
+
     color: white;
+
+    font-size: 15px;
+    font-weight: bold;
 
     cursor: pointer;
 
@@ -201,57 +252,86 @@ nav a:hover {
 }
 
 .product-card button:hover {
-    background: #38bdf8;
-    color: #111827;
+    background: #ec4899;
+
+    transform: scale(1.02);
 }
 
-/* About */
+
+/* =========================
+   ABOUT
+========================= */
 
 .about {
-    padding: 70px 10%;
+    padding: 80px 10%;
+
     text-align: center;
-    background: white;
+
+    background: #ede9fe;
 }
 
 .about h2 {
-    font-size: 32px;
+    font-size: 34px;
+
+    color: #4c1d95;
+
     margin-bottom: 20px;
 }
 
 .about p {
     max-width: 700px;
+
     margin: auto;
-    line-height: 1.7;
+
+    line-height: 1.8;
+
     color: #555;
 }
 
-/* Contact */
+
+/* =========================
+   CONTACT
+========================= */
 
 .contact {
-    padding: 70px 10%;
+    padding: 80px 10%;
+
     text-align: center;
+
+    background: #f8f5ff;
 }
 
 .contact h2 {
+    color: #4c1d95;
+
     margin-bottom: 20px;
 }
 
 .contact p {
-    margin: 8px;
+    margin: 10px;
+
+    color: #555;
 }
 
-/* Footer */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-    background: #111827;
+    background: #2e1065;
+
     color: white;
 
     text-align: center;
 
-    padding: 25px;
+    padding: 28px;
 }
 
-/* Mobile */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 768px) {
 
@@ -263,15 +343,24 @@ footer {
         display: none;
     }
 
+    .hero {
+        min-height: 400px;
+        padding: 30px;
+    }
+
     .hero h1 {
-        font-size: 35px;
+        font-size: 36px;
     }
 
     .hero p {
-        font-size: 16px;
+        font-size: 17px;
     }
 
     .products-section {
-        padding: 50px 20px;
+        padding: 55px 20px;
+    }
+
+    .products-section h2 {
+        font-size: 30px;
     }
 }
